@@ -347,12 +347,12 @@
     source-map-support "^0.5.21"
     typescript "~4.7.4"
 
-"@loopback/context@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@loopback/context/-/context-5.0.2.tgz#693138eba02fd310ea8b321ea2fea1785a9ce966"
-  integrity sha512-aQMvi0asJ+ejslq8dT/tUShxOf7Vv6Z4rO75WYIv7+cNK5b/gcafCuon7sEbDpSB4vtuzBWJncfACcoC2m3VEw==
+"@loopback/context@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@loopback/context/-/context-5.0.3.tgz#85b09a151b5d08d3ecb02273c926105d4072b50c"
+  integrity sha512-u18JeK/zAig5VEDZmVp2vgY8LrdVAeL3F5l5NV0kM6G8wcqkgr83GpC/h8kbOL3UmMuQmzH2Y3FUY/1O8a5I8w==
   dependencies:
-    "@loopback/metadata" "^5.0.2"
+    "@loopback/metadata" "^5.0.3"
     "@types/debug" "^4.1.7"
     debug "^4.3.4"
     hyperid "^3.0.1"
@@ -360,12 +360,12 @@
     tslib "^2.4.0"
     uuid "^8.3.2"
 
-"@loopback/core@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@loopback/core/-/core-4.0.2.tgz#dc14b3511eccb8d5e41971ddd3ff1df65a4ce62b"
-  integrity sha512-R+cik+p5i+cBH1uae6wbap1zrQKMVrgnDTIKXn4FWc9UjQFo0BhEuwhz/73sJr9zRLRI7gDNM2FRC7IfE5o3Xg==
+"@loopback/core@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@loopback/core/-/core-4.0.3.tgz#edd6d42da799c5c5ef90add93745d20b17705319"
+  integrity sha512-pXb0mRm9J+LOZODEtEJMBZ6/KDwvmuxXiJvGQojdIPk5QfWXLKyzDGeKtUQxi9tlb49O/VVkOK+XG5mgDTQiNQ==
   dependencies:
-    "@loopback/context" "^5.0.2"
+    "@loopback/context" "^5.0.3"
     debug "^4.3.4"
     tslib "^2.4.0"
 
@@ -414,10 +414,10 @@
     stoppable "^1.1.0"
     tslib "^2.4.0"
 
-"@loopback/metadata@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@loopback/metadata/-/metadata-5.0.2.tgz#5a7a39f5c56f66a05a78cd19fbb56925ca5396fa"
-  integrity sha512-zu2c490jhBrmSWSpwUgcVCy/0gsdxM4o7g9HnxGd+VKNNtNOWJzNR71hIeI50Dp71+kgYypZ58PCIlPaeXtoLw==
+"@loopback/metadata@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@loopback/metadata/-/metadata-5.0.3.tgz#4be557af91e788aa69a99fd8189a70a391c4aec4"
+  integrity sha512-HT7biC/pS/UvDeEE9ADObDq8h+D+66Ah1J9XDOpROMSQHJ4G0drAaVJi5OvZBgOiPr+caoOo4KXa3wg3lhzs8w==
   dependencies:
     debug "^4.3.4"
     lodash "^4.17.21"

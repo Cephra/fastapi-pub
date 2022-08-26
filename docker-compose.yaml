@@ -1,0 +1,50 @@
+services:
+  db:
+    build:
+      context: ./docker/db
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+  pgadmin:
+    build:
+      context: ./docker/pgadmin
+    restart: always
+    ports:
+      - "5000:80"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    depends_on:
+      - "db"
+  service:
+    profiles: ["all", "service"]
+    build:
+      context: ./service
+    restart: always
+    user: "${UID}"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "db"
+    volumes:
+      - ./service:/service
+      - /service/.env
+    command: ash -c 'yarn install && yarn build && node .'
+  app:
+    profiles: ["all", "app"]
+    build:
+      context: ./app
+    restart: always
+    user: "${UID}"
+    ports:
+      - "3001:3000"
+    depends_on:
+      - "service"
+    volumes:
+      - ./app:/app
+      - /app/.env
+    command: ash -c 'yarn install && yarn dev'
+volumes:
+  pg-data:
+  pgadmin-data:

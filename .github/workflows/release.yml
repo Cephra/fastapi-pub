@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: fastapi
+  IMAGE_NAME: fastapi-pub
 
 jobs:
   push_to_registry:

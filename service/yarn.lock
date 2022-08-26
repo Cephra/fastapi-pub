@@ -528,23 +528,23 @@
     loopback-datasource-juggler "^4.27.1"
     tslib "^2.4.0"
 
-"@loopback/testlab@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@loopback/testlab/-/testlab-5.0.2.tgz#a4cda75085f047b24f411abc88675b1fccf411f2"
-  integrity sha512-iZK36htP1uAle5gyIj0n8tbTPnQ/SUQ32cFC/o583EXiNyg62oj9bN31PKbLeGnks1BfQc82yMYWAxcN4UZUTA==
+"@loopback/testlab@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@loopback/testlab/-/testlab-5.0.3.tgz#54b73dfe39bde8a5bd9aa30a33377ba41a9dcd7d"
+  integrity sha512-eWBjMiuoo6AabYnk5OX2mlRHIt8lcRby88RJvAY/mlO14MZP6peshd7uJvAvWJspVSc/hes2A6RQ9V7+HmF6Vg==
   dependencies:
     "@hapi/shot" "^6.0.0"
     "@types/express" "^4.17.13"
     "@types/fs-extra" "^9.0.13"
     "@types/shot" "^4.0.1"
-    "@types/sinon" "^10.0.12"
+    "@types/sinon" "^10.0.13"
     "@types/supertest" "^2.0.12"
     express "^4.18.1"
     fs-extra "^10.1.0"
     oas-validator "^5.0.8"
     should "^13.2.3"
-    sinon "^11.1.2"
-    supertest "^6.2.3"
+    sinon "^14.0.0"
+    supertest "^6.2.4"
     tslib "^2.4.0"
 
 "@nodelib/fs.scandir@2.1.5":
@@ -582,21 +582,14 @@
   dependencies:
     type-detect "4.0.8"
 
-"@sinonjs/fake-timers@>=5":
+"@sinonjs/fake-timers@>=5", "@sinonjs/fake-timers@^9.1.2":
   version "9.1.2"
   resolved "https://registry.yarnpkg.com/@sinonjs/fake-timers/-/fake-timers-9.1.2.tgz#4eaab737fab77332ab132d396a3c0d364bd0ea8c"
   integrity sha512-BPS4ynJW/o92PUR4wgriz2Ud5gpST5vz6GQfMixEDK0Z8ZCUv2M7SkBLykH56T++Xs+8ln9zTGbOvNGIe02/jw==
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@sinonjs/fake-timers@^7.1.2":
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/@sinonjs/fake-timers/-/fake-timers-7.1.2.tgz#2524eae70c4910edccf99b2f4e6efc5894aff7b5"
-  integrity sha512-iQADsW4LBMISqZ6Ci1dupJL9pprqwcVFTcOsEmQOEhW+KLCVn/Y4Jrvg2k19fIHCp+iFprriYPTdRcQR8NbUPg==
-  dependencies:
-    "@sinonjs/commons" "^1.7.0"
-
-"@sinonjs/samsam@^6.0.2":
+"@sinonjs/samsam@^6.1.1":
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/@sinonjs/samsam/-/samsam-6.1.1.tgz#627f7f4cbdb56e6419fa2c1a3e4751ce4f6a00b1"
   integrity sha512-cZ7rKJTLiE7u7Wi/v9Hc2fs3Ucc3jrWeMgPHbbTCeVAB2S0wOBbYlkJVeNSL04i7fdhT8wIbDq1zhC/PXTD2SA==
@@ -761,7 +754,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/sinon@^10.0.12":
+"@types/sinon@^10.0.13":
   version "10.0.13"
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-10.0.13.tgz#60a7a87a70d9372d0b7b38cc03e825f46981fb83"
   integrity sha512-UVjDqJblVNQYvVNUsj0PuYYw0ELRmgt1Nt5Vk0pT5f16ROGfcKJY8o1HVuMOJOpD727RrGB9EGvoaTQE5tgxZQ==
@@ -2728,7 +2721,7 @@ negotiator@0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
-nise@^5.1.0:
+nise@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/nise/-/nise-5.1.1.tgz#ac4237e0d785ecfcb83e20f389185975da5c31f3"
   integrity sha512-yr5kW2THW1AkxVmCnKEh4nbYkJdB3I7LUkiUgOvEkOp414mc2UMaHMA7pjq1nYowhdoJZGwEKGaQVbxfpWj10A==
@@ -3504,16 +3497,16 @@ signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
 
-sinon@^11.1.2:
-  version "11.1.2"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-11.1.2.tgz#9e78850c747241d5c59d1614d8f9cbe8840e8674"
-  integrity sha512-59237HChms4kg7/sXhiRcUzdSkKuydDeTiamT/jesUVHshBgL8XAmhgFo0GfK6RruMDM/iRSij1EybmMog9cJw==
+sinon@^14.0.0:
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-14.0.0.tgz#203731c116d3a2d58dc4e3cbe1f443ba9382a031"
+  integrity sha512-ugA6BFmE+WrJdh0owRZHToLd32Uw3Lxq6E6LtNRU+xTVBefx632h03Q7apXWRsRdZAJ41LB8aUfn2+O4jsDNMw==
   dependencies:
     "@sinonjs/commons" "^1.8.3"
-    "@sinonjs/fake-timers" "^7.1.2"
-    "@sinonjs/samsam" "^6.0.2"
+    "@sinonjs/fake-timers" "^9.1.2"
+    "@sinonjs/samsam" "^6.1.1"
     diff "^5.0.0"
-    nise "^5.1.0"
+    nise "^5.1.1"
     supports-color "^7.2.0"
 
 slash@^3.0.0:
@@ -3669,7 +3662,7 @@ superagent@^8.0.0:
     readable-stream "^3.6.0"
     semver "^7.3.7"
 
-supertest@^6.2.3:
+supertest@^6.2.4:
   version "6.2.4"
   resolved "https://registry.yarnpkg.com/supertest/-/supertest-6.2.4.tgz#3dcebe42f7fd6f28dd7ac74c6cba881f7101b2f0"
   integrity sha512-M8xVnCNv+q2T2WXVzxDECvL2695Uv2uUj2O0utxsld/HRyJvOU8W9f1gvsYxSNU4wmIe0/L/ItnpU4iKq0emDA==

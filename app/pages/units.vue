@@ -12,7 +12,7 @@ import { mapState } from 'vuex'
 export default {
   name: 'UnitsPage',
   async fetch() {
-    await Promise.all([this.$store.dispatch('fetchUnits')])
+    await this.$store.dispatch('fetchUnits')
   },
   computed: mapState(['units']),
 }

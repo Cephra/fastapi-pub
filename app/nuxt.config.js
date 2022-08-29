@@ -39,6 +39,9 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
   ],
+  bootstrapVue: {
+    icons: true,
+  },
   proxy: {
     '/api': {
       target: process.env.FASTAPI_BACKEND_URL || 'http://service:3000',

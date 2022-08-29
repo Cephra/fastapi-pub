@@ -1,14 +1,15 @@
 # FastAPI
 
-FastAPI ist ein Beispielprojekt für eine einfache Webanwendung mit Datenbank (PostgreSQL), Backend (Loopback.io 4) und Frontend (Nuxt 2).
+FastAPI ist ein Beispielprojekt für eine einfache Webanwendung mit Datenbank (PostgreSQL), Service (Loopback.io 4) und Frontend (Nuxt 2).
 
 ## Installation
 
 Zunächst muss in einem Bash Terminal oder der Power Shell folgendes ausgeführt werden:
 
 ```bash
+cp envs/linux.env .env
 cp envs/app.local.env app/.env
-cp envs/backend.local.env backend/.env
+cp envs/service.local.env service/.env
 docker-compose build
 ```
 
@@ -19,10 +20,10 @@ cd app
 yarn install
 ```
 
-... und parallel für das Backend:
+... und parallel für den Service:
 
 ```bash
-cd backend
+cd service
 yarn install
 ```
 
@@ -30,14 +31,14 @@ yarn install
 
 Wenn alle Abhängigkeiten installiert und alles vorbereitet ist, müssen folgende 2 Befehle parallel gestartet werden:
 
-Für's Backend:
+Für den Service:
 
 ```bash
-cd backend
+cd service
 yarn start
 ```
 
-Für's Frontend:
+Für das Frontend:
 
 ```bash
 cd app

@@ -34,12 +34,16 @@ export default {
           page: '/meters',
         },
         {
+          name: 'Units',
+          page: '/units',
+        },
+        {
           name: 'Values',
           page: '/values',
         },
         {
-          name: 'About',
-          page: '/about',
+          name: 'Zählerstand eintragen',
+          page: '/enterValues',
         },
       ],
     }

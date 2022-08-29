@@ -3,13 +3,13 @@ import {Unit} from './unit.model';
 
 @model({
   settings: {
-    postgresql: { schema: 'public', table: 'meter'},
+    postgresql: {schema: 'public', table: 'meter'},
     foreignKeys: {
-      fk_meter_unitId: {
-        name: 'fk_meter_unit_id',
+      FK_METER_UNIT_ID: {
+        name: 'FK_METER_UNIT_ID',
         entity: 'Unit',
-        entityKey: 'id',
-        foreignKey: 'unit_id',
+        entityKey: 'ID',
+        foreignKey: 'UNIT_ID',
         onDelete: 'CASCADE',
         onUpdate: 'SET NULL',
       },

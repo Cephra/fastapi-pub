@@ -19,7 +19,7 @@ export class FastapiApplication extends BootMixin(
 ) {
   constructor(options: ApplicationConfig = {}) {
     super(options);
-    
+
     // Initialize .env
     dotenv.config();
 

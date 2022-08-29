@@ -1,22 +1,13 @@
-import {
-  repository,
-} from '@loopback/repository';
-import {
-  param,
-  get,
-  getModelSchemaRef,
-} from '@loopback/rest';
-import {
-  Value,
-  Meter,
-} from '../models';
+import {repository} from '@loopback/repository';
+import {param, get, getModelSchemaRef} from '@loopback/rest';
+import {Value, Meter} from '../models';
 import {ValueRepository} from '../repositories';
 
 export class ValueMeterController {
   constructor(
     @repository(ValueRepository)
     public valueRepository: ValueRepository,
-  ) { }
+  ) {}
 
   @get('/values/{id}/meter', {
     responses: {

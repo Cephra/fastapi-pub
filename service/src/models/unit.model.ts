@@ -2,18 +2,8 @@ import {Entity, model, property} from '@loopback/repository';
 
 @model({
   settings: {
-    postgresql: { schema: 'public', table: 'unit'},
-    foreignKeys: {
-      fk_value_meterId: {
-        name: 'fk_value_meter_id',
-        entity: 'Meter',
-        entityKey: 'id',
-        foreignKey: 'meter_id',
-        onDelete: 'CASCADE',
-        onUpdate: 'SET NULL',
-      },
-    },
-  }
+    postgresql: {schema: 'public', table: 'unit'},
+  },
 })
 export class Unit extends Entity {
   @property({
@@ -34,7 +24,6 @@ export class Unit extends Entity {
     required: true,
   })
   name: string;
-
 
   constructor(data?: Partial<Unit>) {
     super(data);

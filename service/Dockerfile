@@ -6,13 +6,15 @@ RUN mkdir -p /home/node/build
 
 WORKDIR /home/node/build
 
-COPY --chown=node . .
+COPY --chown=node package.json yarn.lock ./
 
 RUN yarn install \
   --prefer-offline \
   --frozen-lockfile \
   --non-interactive \
   --production=false
+
+COPY --chown=node . .
 
 RUN yarn build
 

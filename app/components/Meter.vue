@@ -1,9 +1,12 @@
 <template>
-  <b-card :title="name" tag="span" style="max-width: 20rem" class="mb-2">
-    <b-card-text> {{unit}} </b-card-text>
-
-    <b-button href="#" variant="secondary">Löschen</b-button>
-    <b-button href="#" variant="primary">Speichern</b-button>
+  <b-card
+    v-if="meter"
+    :title="meter.name"
+    :sub-title="`${meter.unit.name} (${meter.unit.suffix})`"
+    tag="span"
+    style="max-width: 20rem"
+    class="mb-2"
+  >
   </b-card>
 </template>
 
@@ -11,14 +14,17 @@
 export default {
   name: 'MeterComponent',
   props: {
-    unit: {
+    id: {
       type: Number,
       default: null,
     },
-    name: {
-      type: String,
-      default: '',
-    },
+  },
+  data: () => ({
+    meter: null,
+  }),
+  mounted() {
+    this.meter = this.$store.getters.getMeterById(this.id)
+    this.meter.unit = this.$store.getters.getUnitById(this.meter.unitId)
   },
 }
 </script>

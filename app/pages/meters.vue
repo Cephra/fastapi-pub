@@ -1,21 +1,22 @@
 <template>
   <div class="row">
-    <div v-for="meter in meters" class="col" :key="meter.id">
-      <Meter :name="meter.name" :unit="meter.unitId"/>
+    <div v-for="meter in meters" :key="meter.id" class="col">
+      <Meter :id="meter.id" />
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'MetersPage',
-  data: () => {
-    return {
-      meters: [],
-    }
-  },
   async fetch() {
-    this.meters = await this.$axios.$get('/api/meters')
+    await Promise.all([
+      this.$store.dispatch('fetchMeters'),
+      this.$store.dispatch('fetchUnits'),
+    ])
   },
+  computed: mapState(['meters']),
 }
 </script>

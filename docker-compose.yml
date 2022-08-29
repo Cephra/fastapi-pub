@@ -1,20 +1,26 @@
 services:
   db:
-    build:
-      context: ./docker/db
+    image: postgres:alpine
     restart: always
     ports:
       - "5432:5432"
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
     volumes:
+      - ./docker/db/sql:/docker-entrypoint-initdb.d
       - pg-data:/var/lib/postgresql/data
   pgadmin:
-    build:
-      context: ./docker/pgadmin
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=root@db.com
+      - PGADMIN_DEFAULT_PASSWORD=root
     restart: always
     ports:
       - "5000:80"
     volumes:
       - pgadmin-data:/var/lib/pgadmin
+      - ./docker/pgadmin/servers.json:/pgadmin4/servers.json
     depends_on:
       - "db"
   service:
@@ -29,7 +35,8 @@ services:
       - "db"
     volumes:
       - ./service:/service
-      - /service/.env
+      - /dev/null:/service/.env
+      - node-data:/home/node
     command: ash -c 'yarn install && yarn build && node .'
   app:
     profiles: ["all", "app"]
@@ -43,8 +50,10 @@ services:
       - "service"
     volumes:
       - ./app:/app
-      - /app/.env
+      - /dev/null:/service/.env
+      - node-data:/home/node
     command: ash -c 'yarn install && yarn dev'
 volumes:
   pg-data:
   pgadmin-data:
+  node-data:

@@ -8,9 +8,7 @@ export class UnitRepository extends DefaultCrudRepository<
   typeof Unit.prototype.id,
   UnitRelations
 > {
-  constructor(
-    @inject('datasources.postgres') dataSource: PostgresDataSource,
-  ) {
+  constructor(@inject('datasources.postgres') dataSource: PostgresDataSource) {
     super(Unit, dataSource);
   }
 }

@@ -3,13 +3,13 @@ import {Meter} from './meter.model';
 
 @model({
   settings: {
-    postgresql: { schema: 'public', table: 'value'},
+    postgresql: {schema: 'public', table: 'value'},
     foreignKeys: {
-      fk_value_meterId: {
-        name: 'fk_value_meter_id',
+      FK_VALUE_METER_ID: {
+        name: 'FK_VALUE_METER_ID',
         entity: 'Meter',
-        entityKey: 'id',
-        foreignKey: 'meter_id',
+        entityKey: 'ID',
+        foreignKey: 'METER_ID',
         onDelete: 'CASCADE',
         onUpdate: 'SET NULL',
       },
@@ -28,8 +28,8 @@ export class Value extends Entity {
     type: 'number',
     required: true,
     postgresql: {
-      dataType: 'double precision'
-    }
+      dataType: 'double precision',
+    },
   })
   value: number;
 
@@ -39,7 +39,11 @@ export class Value extends Entity {
   })
   timestamp: string;
 
-  @belongsTo(() => Meter, {name: 'meter'}, {postgresql: {columnName: 'meter_id'}})
+  @belongsTo(
+    () => Meter,
+    {name: 'meter'},
+    {postgresql: {columnName: 'meter_id'}},
+  )
   meterId: number;
 
   constructor(data?: Partial<Value>) {

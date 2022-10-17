@@ -347,25 +347,25 @@
     source-map-support "^0.5.21"
     typescript "~4.7.4"
 
-"@loopback/context@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@loopback/context/-/context-5.0.2.tgz#693138eba02fd310ea8b321ea2fea1785a9ce966"
-  integrity sha512-aQMvi0asJ+ejslq8dT/tUShxOf7Vv6Z4rO75WYIv7+cNK5b/gcafCuon7sEbDpSB4vtuzBWJncfACcoC2m3VEw==
+"@loopback/context@^5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@loopback/context/-/context-5.0.4.tgz#8c15f114744a9ab83994b8b61d34e8a963fd02c1"
+  integrity sha512-YQ8vHeVRpEjkVQnb8yQUlRgmzUuySGDCuCeACH/tFm/SfZOu74h1t7ih0GRWs2NVPJ7uhwapCOW7JQzM829r+A==
   dependencies:
-    "@loopback/metadata" "^5.0.2"
+    "@loopback/metadata" "^5.0.4"
     "@types/debug" "^4.1.7"
     debug "^4.3.4"
     hyperid "^3.0.1"
     p-event "^4.2.0"
     tslib "^2.4.0"
-    uuid "^8.3.2"
+    uuid "^9.0.0"
 
-"@loopback/core@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@loopback/core/-/core-4.0.2.tgz#dc14b3511eccb8d5e41971ddd3ff1df65a4ce62b"
-  integrity sha512-R+cik+p5i+cBH1uae6wbap1zrQKMVrgnDTIKXn4FWc9UjQFo0BhEuwhz/73sJr9zRLRI7gDNM2FRC7IfE5o3Xg==
+"@loopback/core@^4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@loopback/core/-/core-4.0.4.tgz#79fb2378cc2df611fcdd4801d707f4ae99b3e119"
+  integrity sha512-SCmMvFvaFwitDsKBDLaTbwFKR8XK6itS1YA3BUEemfMXSLW7VMYmfUoSq0vFB5HIHxAdSMZQLBYydhg5hxUikQ==
   dependencies:
-    "@loopback/context" "^5.0.2"
+    "@loopback/context" "^5.0.4"
     debug "^4.3.4"
     tslib "^2.4.0"
 
@@ -414,10 +414,10 @@
     stoppable "^1.1.0"
     tslib "^2.4.0"
 
-"@loopback/metadata@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@loopback/metadata/-/metadata-5.0.2.tgz#5a7a39f5c56f66a05a78cd19fbb56925ca5396fa"
-  integrity sha512-zu2c490jhBrmSWSpwUgcVCy/0gsdxM4o7g9HnxGd+VKNNtNOWJzNR71hIeI50Dp71+kgYypZ58PCIlPaeXtoLw==
+"@loopback/metadata@^5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@loopback/metadata/-/metadata-5.0.4.tgz#351c70ffc510ebc15e0500d1d593e467b86b4aa4"
+  integrity sha512-TcxVyJEPzwOPML4fD9mlgy4CbO57PLdl0Wh6IIIpObOkPTDeilqtHu6SiuHBq8MIisKJeiCqJxwz9vMosqZ5CA==
   dependencies:
     debug "^4.3.4"
     lodash "^4.17.21"
@@ -3861,6 +3861,11 @@ uuid@^8.3.0, uuid@^8.3.1, uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
+uuid@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
+  integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
 
 v8-compile-cache@^2.0.3:
   version "2.3.0"
